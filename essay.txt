@@ -1,0 +1,31 @@
+1. What is the difference between forEach and for...of? When would you use each? 
+forEach: Array only, no break/continue, no await
+for...of: Any Iterable, supports break/continue and await
+
+2.What is hoisting and what is the Temporal Dead Zone (TDZ)? Explain with examples.
+Hoisting يعني رفع التعريفات لفوق قبل التنفيذ، وTDZ هي الفترة اللي متغيرات let/const موجودة لكن مش ممكن تستخدمها، أي محاولة للوصول ليها قبل التعريف → ReferenceError.
+// مثال على Hoisting مع var
+console.log(a); // undefined
+var a = 10;
+
+// مثال على TDZ مع let
+console.log(b); //  ReferenceError
+let b = 5;
+
+// مثال على function
+sayHello(); // "Hello!"
+function sayHello() {
+  console.log("Hello!");
+}
+
+
+3.What are the main differences between == and ===?
+== القيم  , === القيم والنوع.
+
+
+
+4.Explain how try-catch works and why it is important in async operations.
+try-catch بيشغّل الكود اللي ممكن يوقع في try ولو حصل غلطة يمسكها في catch، وده مهم في الكود اللي شغال async عشان ما يوقفش البرنامج.
+
+5. What’s the difference between type conversion and coercion? Provide examples of each.
+الـ type conversion بتحوّل النوع بنفسك زي String(10) تبقى "10"، والـ coercion جافاسكريبت بتحوّل النوع لوحدها زي 5 + "5" تبقى "55".
