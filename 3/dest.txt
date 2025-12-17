@@ -1,0 +1,3 @@
+1. Use a readable stream to read a file in chunks and log each chunk. (0.5 Grade)
+• Input Example: "./big.txt"
+• Output Example: log each chunk
